@@ -1,7 +1,7 @@
 # Comienzo con el objeto form de JavaScript
 
-**Autor** : Diego Alonso Molina (Full Stack Developer) 
-**GitHub** : https://github.com/DiegusNueva/objectForm
+**Autor** : Alejandro Ruiz Prieto
+**GitHub** : https://github.com/Alesso-ai/T5_FORM.git
 
 | Tema                                     | Descripción                                                               |
 | ---------------------------------------- | ------------------------------------------------------------------------- |
