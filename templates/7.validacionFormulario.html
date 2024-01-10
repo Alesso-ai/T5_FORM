@@ -211,7 +211,7 @@
           // Validamos también el campo 'edad'
           else if (formulario.elements[i].id == "edad") {
             let laEdad = formulario.elements[i].value;
-            if (isNaN(laEdad) || laEdad < 0 || laEdad > 115) {
+            if (isNaN(laEdad) || laEdad <= 0 || laEdad > 115) {
               
               //Lo mismo en edad
               spanError.innerText = "El campo " + formulario.elements[i].name + " no es correcto";
@@ -244,7 +244,7 @@
 
       function validarProvincia() {
         // Comprueba que la opción seleccionada sea diferente a 0.
-        // Si es la 0 es que no ha seleccionado ningún nombre de Provincia.
+        // Si es la 0 es que no ha seleccionado ningún nombre de Provincia
         if (document.getElementById("provincia").selectedIndex == 0) {
           //Declaramos el spanError y metemos directamente el texto
           letspanError = document.getElementById("error5");
@@ -264,6 +264,19 @@
       document
         .getElementById("enviar")
         .addEventListener("click", validar, false);
+
+        //Cuando se haga el cambio en cada uno de los apartados de form no resetee los estilos
+
+        document.getElementById("nombre").addEventListener("change", function(){
+          //Declaramos spanError
+          let spanError = document.getElementById("error1");
+          //Limpiamos el spanError
+          spanError.innerText= "";
+          spanError.classList.remove("error");
+          document.getElementById("nombre").classList.remove("borderError");
+        });
+
+
     </script>
   </body>
 </html>
