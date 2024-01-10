@@ -267,6 +267,7 @@
 
         //Cuando se haga el cambio en cada uno de los apartados de form no resetee los estilos
 
+        /*
         document.getElementById("nombre").addEventListener("change", function(){
           //Declaramos spanError
           let spanError = document.getElementById("error1");
@@ -276,6 +277,63 @@
           document.getElementById("nombre").classList.remove("borderError");
         });
 
+        document.getElementById("apellidos").addEventListener("change", function(){
+          //Declaramos spanError
+          let spanError = document.getElementById("error2");
+          //Limpiamos el spanError
+          spanError.innerText= "";
+          spanError.classList.remove("error");
+          document.getElementById("apellidos").classList.remove("borderError");
+        });
+
+
+        document.getElementById("matricula").addEventListener("change", function(){
+          //Declaramos spanError
+          let spanError = document.getElementById("error3");
+          //Limpiamos el spanError
+          spanError.innerText= "";
+          spanError.classList.remove("error");
+          document.getElementById("matricula").classList.remove("borderError");
+        });
+
+
+        document.getElementById("edad").addEventListener("change", function(){
+          //Declaramos spanError
+          let spanError = document.getElementById("error4");
+          //Limpiamos el spanError
+          spanError.innerText= "";
+          spanError.classList.remove("error");
+          document.getElementById("edad").classList.remove("borderError");
+        });
+
+
+        document.getElementById("provincia").addEventListener("change", function(){
+          //Declaramos spanError
+          let spanError = document.getElementById("error5");
+          //Limpiamos el spanError
+          spanError.innerText= "";
+          spanError.classList.remove("error");
+          document.getElementById("provincia").classList.remove("borderError");
+        }); */
+
+        //Simplificar en una funcion
+
+        function agregarEventoLimpieza (idElemento, idError){
+          let elemento = document.getElementById(idElemento);
+          let spanError = document.getElementById(idError);
+          elemento.addEventListener("change", function(){
+            //Limpiamos el spanError
+            spanError.innerText= "";
+            spanError.classList.remove("error");
+            elemento.classList.remove("error");
+            elemento.classList.remove("borderError");
+          });
+        }
+      agregarEventoLimpieza("nombre", "error1");
+      agregarEventoLimpieza("apellidos", "error2");
+      agregarEventoLimpieza("edad", "error3");
+      agregarEventoLimpieza("matricula", "error4");
+      agregarEventoLimpieza("provincia", "error5");
 
     </script>
   </body>
